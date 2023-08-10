@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Admin Page</title>
+</head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif, font-style:bold, background-color:#33FFF6,text-align:center;}
+form {border: 3px solid #F0FFF0 , background-color:#F0FFF0;}
+.imgcontainer {
+  text-align: center;
+  width:50%;
+  breadth:50%;
+  margin:auto;
+
+  
+}
+.topnav {
+  overflow: hidden;
+  background-color: #48C9B0;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: black;
+}
+input[type=text] {
+  width: 40%;
+  breadth: 200%;
+  padding: 15px 15px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin:auto;
+}
+.container {
+  padding-left:350px;
+  width : 70%;
+  breadth : 50%;
+  margin:auto;
+  border:None;
+  background-color:None;
+  
+  
+  
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 10%;
+  padding-left:100px;
+}
+.checkbtn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn{
+	padding-left:150px;
+}
+
+	
+
+</style>
+</head>
+<body style="background-image: url('static/p2.jpg'); background-repeat:no-repeat; height:600px; background-size: cover;">
+  <div class="topnav">
+  <a class="active" href="/text-checker">Home</a>
+  <a href="/file-checker"><b>Upload File</b></a>
+  <a href="/log-out"><b>Logout</b></a>
+  </div>
+  <br>
+  <br>
+  <div class="imgcontainer">
+    <img src="static/l4.jpg" alt="Avatar" class="avatar" >
+  </div>
+  <br>
+  <br>
+  <br>
+  <form action="{{url_for('check')}}" method="post">
+    <div class="container">
+      <input type="text" placeholder="Enter Text-Source" name="source" required>
+       <input type="text" placeholder="Enter Text-Destination" name="target" required>
+    </div>
+    <br>
+    <br>
+    <div class="btn">
+      <center><h1><button type="submit" class="checkbtn">CHECK FOR PLAGIARISM </button></h1><center>
+      </center>
+      </center>
+    </div>
+  </form>
+</body>
+</html>
